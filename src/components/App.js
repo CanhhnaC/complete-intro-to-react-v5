@@ -1,6 +1,5 @@
 import React from "react";
 
-import Pet from "./Pet";
 import SearchParams from "./SearchParams";
 
 import "./App.css";
