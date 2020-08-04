@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 import { Router, Link } from "@reach/router";
 
