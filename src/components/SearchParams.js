@@ -30,7 +30,7 @@ const SearchParams = () => {
     pet.breeds(animal).then(({ breeds }) => {
       const breedStrings = breeds.map(({ name }) => name);
       setBreeds(breedStrings);
-    }, console.error());
+    }, console.error);
   }, [animal, setBreed, setBreeds]);
 
   return (
@@ -53,7 +53,7 @@ const SearchParams = () => {
 
         <AnimalDropdown />
         <BreedDropdown />
-        
+
         <label htmlFor="theme">
           Theme
           <select
