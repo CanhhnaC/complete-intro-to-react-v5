@@ -1,16 +1,14 @@
-import React, { useState, lazy, Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import { Router, Link } from "@reach/router";
+import { Provider } from "react-redux";
+import store from "./store";
 
-import ThemeContext from "./ThemeContext";
-
-const Details = lazy(() => import('./Details'))
-const SearchParams = lazy(() => import('./SearchParams'))
+const Details = lazy(() => import("./Details"));
+const SearchParams = lazy(() => import("./SearchParams"));
 
 function App() {
-  const themeHook = useState("black");
-
   return (
-    <ThemeContext.Provider value={themeHook}>
+    <Provider store={store}>
       <div>
         <header>
           <Link to="/">Adopt Me!</Link>
@@ -22,7 +20,7 @@ function App() {
           </Router>
         </Suspense>
       </div>
-    </ThemeContext.Provider>
+    </Provider>
   );
 }
 
