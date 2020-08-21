@@ -43,11 +43,7 @@ const SearchParams = (props) => {
       >
         <label htmlFor="location">
           Location
-          <input
-            id="location"
-            value={props.location}
-            placeholder="location"
-            onChange={(e) => props.updateLocation(e.target.value)}
+          <input id="location" value={props.location} placeholder="location" onChange={(e) => props.updateLocation(e.target.value)}
           />
         </label>
 
@@ -70,6 +66,7 @@ const SearchParams = (props) => {
 
         <button style={{ backgroundColor: props.theme }}>Submit</button>
       </form>
+
       <Results pets={pets} />
     </div>
   );
