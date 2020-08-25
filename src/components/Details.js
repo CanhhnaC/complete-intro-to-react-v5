@@ -19,8 +19,7 @@ class Details extends React.Component {
           name: animal.name,
           animal: animal.type,
           location: `${animal.contact.address.city}, ${
-            animal.contact.address.state
-            }`,
+            animal.contact.address.state}`,
           description: animal.description,
           media: animal.photos,
           breed: animal.breeds.primary,
